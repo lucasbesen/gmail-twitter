@@ -8,11 +8,15 @@ import styled from 'styled-components';
 import Tweet from '../components/Tweet';
 import Loading from '../components/Loading';
 import { Checkbox, Refresh, MoreVertical } from '../components/icons';
-
-import { IQuery, ITweet } from '../types';
 import getFilterValue from '../utils/getFilterValue';
 
-interface TweetsQueryVars {
+import { ITweet, ITwitter } from '../types';
+
+interface ITweetsQueryData {
+  twitter: ITwitter;
+}
+
+interface ITweetsQueryVars {
   q: string;
   count: number;
   resultType: string;
@@ -49,7 +53,7 @@ const TWEETS_QUERY = gql`
 
 const Home: React.FC<RouteComponentProps> = ({ location }) => {
   const [tweets, setTweets] = useState<ITweet[]>([]);
-  const { data, loading } = useQuery<IQuery, TweetsQueryVars>(TWEETS_QUERY, {
+  const { data, loading } = useQuery<ITweetsQueryData, ITweetsQueryVars>(TWEETS_QUERY, {
     variables: { q: '#mars', count: 40, resultType: 'recent' },
   });
 
