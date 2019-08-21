@@ -1,7 +1,7 @@
 import { Inbox as Inbox_ } from 'styled-icons/octicons/Inbox';
 import styled from 'styled-components';
 
-import {sidebarIconSharedStyle} from "./utils";
+import { sidebarIconSharedStyle } from './utils';
 
 const Inbox = styled(Inbox_)`
   ${sidebarIconSharedStyle}
