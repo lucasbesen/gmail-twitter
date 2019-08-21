@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   border-bottom: 1px solid #eee;
 `;
 
-const Topbar = () => (
+const Topbar: React.FC = () => (
   <Wrapper>
     <Logo />
     <TextField />

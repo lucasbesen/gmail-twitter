@@ -24,7 +24,7 @@ const Icon = styled.img.attrs({
   height: 20px;
 `;
 
-const SidebarItem = () => (
+const SidebarItem: React.FC = () => (
   <Wrapper>
     <Icon />
     <Text>Inbox</Text>

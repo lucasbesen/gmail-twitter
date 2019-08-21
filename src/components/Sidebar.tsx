@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
-const Sidebar = () => (
+const Sidebar: React.FC = () => (
   <Wrapper>
     <ComposeButton />
     <SidebarItem />

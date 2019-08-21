@@ -16,6 +16,6 @@ const Button = styled.button`
   }
 `;
 
-const ComposeButton = () => <Button>Compose</Button>;
+const ComposeButton: React.FC = () => <Button>Compose</Button>;
 
 export default ComposeButton;
