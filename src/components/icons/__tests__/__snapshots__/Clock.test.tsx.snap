@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Clock icon without error 1`] = `
+<svg
+  aria-hidden="true"
+  className="sc-htoDjs eYbtof StyledIconBase-sc-bdy9j4 jbPeIR"
+  fill="currentColor"
+  focusable="false"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M8 0a8 8 0 100 16A8 8 0 008 0zm2.293 11.707L7 8.414V4h2v3.586l2.707 2.707-1.414 1.414z"
+  />
+</svg>
+`;
