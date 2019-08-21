@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ComposeButton without error 1`] = `
+<button
+  className="sc-bdVaJa KESzz"
+>
+  Compose
+</button>
+`;

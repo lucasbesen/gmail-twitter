@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Topbar without error 1`] = `
+<div
+  className="sc-jTzLTM gKQAQk"
+>
+  <div
+    className="sc-fjdhpX jJAgek"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-gzVnrw odpQf StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+    <img
+      className="sc-bdVaJa llObtl"
+      src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x.png"
+    />
+  </div>
+  <input
+    className="sc-bxivhb iCxCdt"
+    defaultValue=""
+    onChange={[Function]}
+  />
+  <div
+    className="sc-fjdhpX jJAgek"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-bZQynM htugFp StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 6a3.939 3.939 0 00-3.934 3.934h2C10.066 8.867 10.934 8 12 8s1.934.867 1.934 1.934c0 .598-.481 1.032-1.216 1.626a9.208 9.208 0 00-.691.599c-.998.997-1.027 2.056-1.027 2.174v.167h2l-.001-.133c.001-.016.033-.386.441-.793.15-.15.339-.3.535-.458.779-.631 1.958-1.584 1.958-3.182A3.937 3.937 0 0012 6zm-1 10h2v2h-2z"
+      />
+      <path
+        d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      className="sc-ifAKCX exhDBy StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"
+      />
+    </svg>
+    <div
+      className="sc-bwzfXH bcDeii"
+    >
+      <img
+        className="sc-htpNat ibGwFF"
+        src="https://lh3.googleusercontent.com/-biDP4iMaG_A/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdNR-6OWw8tGnSp58jq9b4qx0FZVw.CMID/s64-c/photo.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
