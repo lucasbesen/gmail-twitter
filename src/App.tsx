@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+import apolloClient from './graphql/apolloClient';
 
 import Topbar from './components/Topbar';
 import Sidebar from './components/Sidebar';
@@ -18,13 +21,15 @@ const Wrapper = styled.div`
 `;
 
 const App: React.FC = () => (
-  <AppWrapper>
-    <Topbar />
-    <Wrapper>
-      <Sidebar />
-      <AppRouter />
-    </Wrapper>
-  </AppWrapper>
+  <ApolloProvider client={apolloClient}>
+    <AppWrapper>
+      <Topbar />
+      <Wrapper>
+        <Sidebar />
+        <AppRouter />
+      </Wrapper>
+    </AppWrapper>
+  </ApolloProvider>
 );
 
 export default App;
