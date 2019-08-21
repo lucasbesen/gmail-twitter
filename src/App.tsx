@@ -5,8 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import apolloClient from './graphql/apolloClient';
 
-import Topbar from './components/Topbar';
-import Sidebar from './components/Sidebar';
+import Topbar from './components/topbar/Topbar';
+import Sidebar from './components/sidebar/Sidebar';
 import AppRouter from './AppRouter';
 
 const AppWrapper = styled.div`

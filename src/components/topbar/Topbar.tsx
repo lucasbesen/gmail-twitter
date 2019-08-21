@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { debounce } from 'lodash';
-import { Menu } from 'styled-icons/material/Menu';
-import { Apps } from 'styled-icons/material/Apps';
-import { HelpCircle } from 'styled-icons/boxicons-regular/HelpCircle';
 
+import getFilterValue from '../../utils/getFilterValue';
 import Logo from './Logo';
 import ProfilePic from './ProfilePic';
 import TextField from './TextField';
-import getFilterValue from '../utils/getFilterValue';
-
-const sharedStyle = css`
-  height: 25px;
-  color: #5f6368;
-  margin-right: 25px;
-  cursor: pointer;
-`;
+import { Menu, Help, Apps } from '../icons';
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,18 +25,6 @@ const InnerWrapper = styled.div`
   align-items: center;
 `;
 
-const MenuButton = styled(Menu)`
-  ${sharedStyle}
-`;
-
-const AppsButton = styled(Apps)`
-  ${sharedStyle}
-`;
-
-const HelpButton = styled(HelpCircle)`
-  ${sharedStyle}
-`;
-
 const Topbar: React.FC<RouteComponentProps> = ({ location, history }) => {
   const [filter, setFilter] = useState(getFilterValue(location.search));
 
@@ -60,13 +39,13 @@ const Topbar: React.FC<RouteComponentProps> = ({ location, history }) => {
   return (
     <Wrapper>
       <InnerWrapper>
-        <MenuButton />
+        <Menu />
         <Logo />
       </InnerWrapper>
       <TextField defaultValue={filter} onChange={e => handleFilter(e.target.value)} />
       <InnerWrapper>
-        <HelpButton />
-        <AppsButton />
+        <Help />
+        <Apps />
         <ProfilePic />
       </InnerWrapper>
     </Wrapper>

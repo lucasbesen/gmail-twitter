@@ -7,6 +7,7 @@ import styled from 'styled-components';
 
 import Tweet from '../components/Tweet';
 import Loading from '../components/Loading';
+import { Checkbox, Refresh, MoreVertical } from '../components/icons';
 
 import { IQuery, ITweet } from '../types';
 import getFilterValue from '../utils/getFilterValue';
@@ -20,6 +21,15 @@ interface TweetsQueryVars {
 const Wrapper = styled.div`
   width: 100%;
   overflow-y: auto;
+`;
+
+const ActionBar = styled.div`
+  display: flex;
+  flex: 1;
+  height: 25px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 14px;
 `;
 
 const TWEETS_QUERY = gql`
@@ -58,7 +68,16 @@ const Home: React.FC<RouteComponentProps> = ({ location }) => {
     return R.map((tweet: ITweet) => <Tweet key={tweet.id} tweet={tweet} />, tweets);
   };
 
-  return <Wrapper>{loading ? <Loading /> : renderTweets()}</Wrapper>;
+  return (
+    <Wrapper>
+      <ActionBar>
+        <Checkbox />
+        <Refresh />
+        <MoreVertical />
+      </ActionBar>
+      {loading ? <Loading /> : renderTweets()}
+    </Wrapper>
+  );
 };
 
 export default withRouter(Home);
