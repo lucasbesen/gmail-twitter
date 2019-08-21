@@ -25,17 +25,18 @@ const TweetInfo = styled.div`
 
 const TweetText = styled.div`
   flex: 8;
+  padding-right: 15px;
 `;
 
-type Props = {
+interface Props {
   tweet: ITweet;
-};
+}
 
-const Tweet: React.FC<Props> = ({ tweet }: Props) => (
+const Tweet: React.FC<Props> = ({ tweet }) => (
   <Wrapper>
     <TweetInfo>{tweet.user.name}</TweetInfo>
     <TweetText>{tweet.text}</TweetText>
-    <TweetInfo>{moment(tweet.created_at).format('DD/MM/YYYY HH:mm')}</TweetInfo>
+    <TweetInfo>{moment(new Date(tweet.created_at)).format('DD/MM/YYYY HH:mm')}</TweetInfo>
   </Wrapper>
 );
 
