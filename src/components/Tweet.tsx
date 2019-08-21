@@ -31,11 +31,11 @@ const TweetText = styled.div`
   padding-right: 15px;
 `;
 
-interface Props {
+interface IProps {
   tweet: ITweet;
 }
 
-const Tweet: React.FC<Props> = ({ tweet }) => (
+const Tweet: React.FC<IProps> = ({ tweet }) => (
   <Wrapper>
     <Checkbox />
     <Star />

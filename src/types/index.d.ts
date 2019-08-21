@@ -13,7 +13,3 @@ export interface ITwitter {
   search?: ITweet[];
   tweet?: ITweet;
 }
-
-export interface IQuery {
-  twitter: ITwitter;
-}

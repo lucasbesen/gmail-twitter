@@ -1,9 +1,9 @@
-import { ApolloClient } from "apollo-client";
-import { createHttpLink } from "apollo-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloClient } from 'apollo-client';
+import { createHttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const link = createHttpLink({
-  uri: "https://lucasbesen-twitter.herokuapp.com/graphql"
+  uri: process.env.REACT_APP_GRAPHQL_URL,
 });
 
 const apolloClient = new ApolloClient({
