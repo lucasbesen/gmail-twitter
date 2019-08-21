@@ -10,5 +10,10 @@ export interface ITweet {
 }
 
 export interface ITwitter {
-  search: ITweet[];
+  search?: ITweet[];
+  tweet?: ITweet;
+}
+
+export interface IQuery {
+  twitter: ITwitter;
 }
