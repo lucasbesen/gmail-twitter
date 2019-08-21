@@ -5,6 +5,7 @@ const Logo = styled.img.attrs({
 })`
   width: 109px;
   height: 40px;
+  cursor: pointer;
 `;
 
 export default Logo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ComposeButton from '../ComposeButton';
+import ComposeButton from '../topbar/ComposeButton';
 import SidebarItem from './SidebarItem';
 import { SIDEBAR_ITEM_TYPE } from './constants';
 
