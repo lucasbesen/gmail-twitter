@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import * as R from 'ramda';
 import { useQuery } from '@apollo/react-hooks';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
 
 import Tweet from '../components/Tweet';
 import Loading from '../components/Loading';
 
-import { ITweet, ITwitter } from '../types';
-
-interface TweetsQueryData {
-  twitter: ITwitter;
-}
+import { IQuery, ITweet } from '../types';
+import getFilterValue from '../utils/getFilterValue';
 
 interface TweetsQueryVars {
   q: string;
@@ -39,21 +37,28 @@ const TWEETS_QUERY = gql`
   }
 `;
 
-const Home: React.FC = () => {
+const Home: React.FC<RouteComponentProps> = ({ location }) => {
   const [tweets, setTweets] = useState<ITweet[]>([]);
-  const { data, loading } = useQuery<TweetsQueryData, TweetsQueryVars>(TWEETS_QUERY, {
+  const { data, loading } = useQuery<IQuery, TweetsQueryVars>(TWEETS_QUERY, {
     variables: { q: '#mars', count: 40, resultType: 'recent' },
   });
 
   useEffect(() => {
     if (!R.isEmpty(data) && !R.isEmpty(data!.twitter)) {
-      setTweets(data!.twitter.search);
+      setTweets(data!.twitter.search || []);
     }
-  }, [data, tweets]);
+  }, [tweets, data]);
 
-  const renderTweets = R.map((tweet: ITweet) => <Tweet key={tweet.id} tweet={tweet} />);
+  const renderTweets = () => {
+    const search = getFilterValue(location.search);
+    if (search) {
+      const filteredTweets = R.filter(R.where({ text: R.contains(search) }))(data!.twitter.search || []);
+      return R.map((tweet: ITweet) => <Tweet key={tweet.id} tweet={tweet} />, filteredTweets);
+    }
+    return R.map((tweet: ITweet) => <Tweet key={tweet.id} tweet={tweet} />, tweets);
+  };
 
-  return <Wrapper>{loading ? <Loading /> : renderTweets(tweets)}</Wrapper>;
+  return <Wrapper>{loading ? <Loading /> : renderTweets()}</Wrapper>;
 };
 
-export default Home;
+export default withRouter(Home);
