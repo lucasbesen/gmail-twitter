@@ -15,7 +15,7 @@ yarn start
 ```
 
 ## :gear: &nbsp; Stack
-**Backend**: https://github.com/clayallsopp/graphqlhub\
+**Backend**: https://github.com/clayallsopp/graphqlhub \
 **Frontend**: React with Hooks, Apollo, Ramda, Styled Components & TypeScript
 
 
