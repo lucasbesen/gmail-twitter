@@ -11,7 +11,7 @@ cp .env.example .env
 Then just run the following command:
 
 ```sh
-yarn start
+yarn & yarn start
 ```
 
 ## :gear: &nbsp; Stack
