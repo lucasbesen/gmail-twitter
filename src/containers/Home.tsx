@@ -36,7 +36,7 @@ const ActionBar = styled.div`
   padding: 14px;
 `;
 
-const TWEETS_QUERY = gql`
+export const TWEETS_QUERY = gql`
   query TweetsQuery($q: String!, $count: Int!, $resultType: SearchReponse!) {
     twitter {
       search(q: $q, count: $count, result_type: $resultType) {

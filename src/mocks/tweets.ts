@@ -8,3 +8,12 @@ export const tweetMock: ITweet = {
   },
   created_at: 'Wed Aug 21 23:17:05 +0000 2019',
 };
+
+export const tweetMock2: ITweet = {
+  id: '22222222',
+  text: 'This is a tweet 2',
+  user: {
+    name: 'User number 2',
+  },
+  created_at: 'Wed Aug 19 23:17:05 +0000 2019',
+};
