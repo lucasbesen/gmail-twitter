@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ProfilePic without error 1`] = `
+<div
+  className="sc-bdVaJa kIbVTK"
+>
+  <img
+    className="sc-bwzfXH bFYweS"
+    src="https://lh3.googleusercontent.com/-biDP4iMaG_A/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdNR-6OWw8tGnSp58jq9b4qx0FZVw.CMID/s64-c/photo.jpg"
+  />
+</div>
+`;

@@ -3,7 +3,7 @@ interface IUser {
 }
 
 export interface ITweet {
-  created_at: Date;
+  created_at: string;
   id: string;
   text: string;
   user: IUser;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return SIDEBAR_ITEM_TYPE constant 1`] = `
+Object {
+  "INBOX": "INBOX",
+  "SNOOZED": "SNOOZED",
+  "STARRED": "STARRED",
+}
+`;

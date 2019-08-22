@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return css for sharedStyle utils 1`] = `
+Array [
+  "
+  height: 25px;
+  color: #5f6368;
+  margin-right: 25px;
+  cursor: pointer;
+
+  :hover {
+    background-color: #eee;
+    border-radius: 15px;
+  }
+",
+]
+`;
+
+exports[`should return css for sidebarIconSharedStyle utils 1`] = `
+Array [
+  "
+  height: 20px;
+  color: #767676;
+",
+]
+`;

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return yes on getFilterValue 1`] = `"yes"`;
