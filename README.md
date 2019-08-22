@@ -1,4 +1,4 @@
-**Live demo**: click [here](https://https://lucasbesen-gmail-twitter.herokuapp.com/)
+**Live demo**: click [here](https://lucasbesen-gmail-twitter.herokuapp.com/)
 
 ## :hammer: &nbsp; How to run the code
 
